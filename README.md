@@ -1,15 +1,23 @@
 # USB-Access-Control
 <br>
-In a Windows environment, you can choose whether to use the USB before it is recognized.
-<br>
 윈도우 환경에서 USB를 인식하기 전에 사용 여부를 선택할 수 있습니다.<br>
-<h3>Used to MFC
+In a Windows environment, you can choose whether to use the USB before it is recognized.<br>
+<h3>MFC에서 사용 가능합니다.</h3>
+Used to MFC<br>
 <br>
-MFC에서 사용 가능합니다.</h3>
+<h3>주의사항</h3>
+1. 'TestDlg.cpp'에 있는 'OnDeviceChange', 'RegisterForDeviceNotification' 함수를 참고하세요.<br>
+&nbps;&nbps;&nbps;Refer the function 'OnDeviceChange', 'RegisterForDeviceNotification' in 'TestDlg.cpp'.<br>
+2. 'USB.cpp'에 있는 'CUsbControl' 클래스를 사용하여 USB를 제어할 수 있습니다.<br>
+&nbps;&nbps;&nbps;The USB can be controlled using the 'CUsbControl' class located in 'USB.cpp'.<br>
+3. 'CUsbControl'은 'Dlg'안에서 사용되기 때문에 'Dlg' 멤버변수로 선언하여 사용해야 합니다.<br>
+&nbps;&nbps;&nbps;Since 'CUsbControl' is used within 'Dlg', it must be declared as a 'Dlg' member variable.<br>
 <br>
+<h3>장치 허용</h3>
+Device Enable<br>
+m_UsbControl.Enable();<br>
 <br>
-<h4>주의사항</h4>
-TestDlg.cpp에 있는 OnDeviceChange, RegisterForDeviceNotification 함수를 참고하세요.<br>
-USB.cpp의 CUsbControl 클래스를 사용하여 USB를 제어할 수 있습니다.<br>
-CUsbControl은 Dlg안에서 사용되기 때문에 Dlg 멤버변수로 선언하여 사용해야 합니다.<br>
-
+<h3>장치 제거</h3>
+Device Remove<br>
+m_UsbControl.Remove();<br>
+<br>
