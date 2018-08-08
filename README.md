@@ -5,7 +5,6 @@ In a Windows environment, you can choose whether to use the USB before it is rec
 <h3>MFC에서 사용 가능합니다.</h3>
 Used to MFC<br>
 <br>
-<h3>주의사항</h3>
 1. 'TestDlg.cpp'에 있는 'OnDeviceChange', 'RegisterForDeviceNotification' 함수를 참고하세요.<br>
 &nbsp;&nbsp;&nbsp;Refer the function 'OnDeviceChange', 'RegisterForDeviceNotification' in 'TestDlg.cpp'.<br>
 2. 'USB.cpp'에 있는 'CUsbControl' 클래스를 사용하여 USB를 제어할 수 있습니다.<br>
