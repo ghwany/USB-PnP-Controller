@@ -2,7 +2,7 @@
 #pragma once
 
 
-#include "Usb.h"
+#include "USB.h"
 #include "afxwin.h"
 
 
