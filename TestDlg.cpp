@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
-#include "USBw.h"
-#include "USBwDlg.h"
+#include "Test.h"
+#include "TestDlg.h"
 #include "MsgboxDlg.h"
 #include "afxdialogex.h"
 #include <Dbt.h>
@@ -12,8 +12,8 @@
 #endif
 
 
-CUSBwDlg::CUSBwDlg(CWnd* pParent /*=NULL*/)
-    : CDlgDraw(CUSBwDlg::IDD, pParent)
+CTestDlg::CTestDlg(CWnd* pParent /*=NULL*/)
+    : CDlgDraw(CTestDlg::IDD, pParent)
 {
     m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 
@@ -21,19 +21,19 @@ CUSBwDlg::CUSBwDlg(CWnd* pParent /*=NULL*/)
 }
 
 
-void CUSBwDlg::DoDataExchange(CDataExchange* pDX)
+void CTestDlg::DoDataExchange(CDataExchange* pDX)
 {
     CDialogEx::DoDataExchange(pDX);
 }
 
 
-BEGIN_MESSAGE_MAP(CUSBwDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CTestDlg, CDialogEx)
     ON_WM_DEVICECHANGE()
     ON_WM_DESTROY()
 END_MESSAGE_MAP()
 
 
-BOOL CUSBwDlg::OnInitDialog()
+BOOL CTestDlg::OnInitDialog()
 {
     CDialogEx::OnInitDialog();
 
@@ -43,14 +43,14 @@ BOOL CUSBwDlg::OnInitDialog()
 }
 
 
-void CUSBwDlg::OnDestroy()
+void CTestDlg::OnDestroy()
 {
     CDialogEx::OnDestroy();
     UnregisterDeviceNotification(m_hDevNotify);
 }
 
 
-void CUSBwDlg::RegisterForDeviceNotification()
+void CTestDlg::RegisterForDeviceNotification()
 {
     DEV_BROADCAST_DEVICEINTERFACE devInterface;
     devInterface.dbcc_size = sizeof(devInterface);
@@ -60,7 +60,7 @@ void CUSBwDlg::RegisterForDeviceNotification()
 }
 
 
-BOOL CUSBwDlg::OnDeviceChange
+BOOL CTestDlg::OnDeviceChange
 (
     UINT      nEventType,
     DWORD_PTR dwData
