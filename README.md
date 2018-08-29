@@ -4,9 +4,7 @@
 윈도우 환경에서 USB를 인식하기 전에 사용 여부를 선택할 수 있습니다.
 
 
-## MFC에서 사용 가능합니다.
-
-#### Used to MFC
+### MFC에서 사용 가능합니다.
 
 
 1. 'TestDlg.cpp'에 있는 'OnDeviceChange', 'RegisterForDeviceNotification' 함수를 참고하세요.
@@ -19,14 +17,12 @@
 
 
 ### 장치 허용
-#### Device Enable
 ```c++
 m_UsbControl.Enable();
 ```
 
 
 ### 장치 제거
-#### Device Remove
 ```c++
 m_UsbControl.Remove();
 ```
